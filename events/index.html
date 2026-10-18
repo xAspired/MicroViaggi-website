@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventi — Micro Viaggi del Tempo</title>
+  <meta name="description" content="Aggiornamenti e percorsi a tema di Micro Viaggi del Tempo: nuovi viaggi nel passato, uno alla volta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="events.css" />
+</head>
+<body>
+
+  <!-- Stars background -->
+  <div class="stars" id="stars"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="../index.html">🧭 Micro Viaggi del Tempo</a>
+    <div class="nav-right">
+      <div class="lang-picker" id="langPicker">
+        <button class="lang-current" id="langBtn" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-flag" id="langFlag">🇮🇹</span>
+          <span class="lang-code" id="langCode">IT</span>
+          <svg class="lang-chevron" viewBox="0 0 10 6" width="10" height="6" fill="none">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown" id="langDropdown" role="listbox">
+          <li class="lang-option active" data-lang="it" role="option">🇮🇹 Italiano</li>
+          <li class="lang-option" data-lang="en" role="option">🇬🇧 English</li>
+        </ul>
+      </div>
+
+      <a class="nav-btn" id="navBtn" href="https://apps.apple.com/it/app/micro-viaggi-del-tempo/id6769732967?l=en-GB" target="_blank">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <span data-i18n="navBtn">Scarica gratis</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="events-hero">
+    <a class="back-link" href="../index.html" data-i18n="backLink">&larr; Torna al sito</a>
+
+    <p class="events-eyebrow" data-i18n="eyebrow">Novità</p>
+
+    <h1 class="events-hero-title">
+      <span data-i18n="heroTitle1">Eventi</span> <em data-i18n="heroTitle2">in corso</em>
+    </h1>
+
+    <p class="events-hero-sub" data-i18n="heroSub">
+      Nuovi percorsi, nuove epoche, nuove storie. Ogni aggiornamento di Micro Viaggi del Tempo ha la sua pagina dedicata.
+    </p>
+  </section>
+
+  <!-- EVENTS GRID -->
+  <div class="section events-list reveal">
+    <div class="events-grid" id="eventsGrid"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">🧭 Micro Viaggi del Tempo</div>
+    <p class="footer-tagline" data-i18n="footerTagline">Piccoli viaggi. Grandi scoperte.</p>
+    <a class="footer-cta" href="https://apps.apple.com/it/app/micro-viaggi-del-tempo/id6769732967?l=en-GB" target="_blank">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      <span data-i18n="footerCta">Scaricala su App Store</span>
+    </a>
+    <p class="footer-copy">© 2026 GianMattia · App sviluppata in Italia 🇮🇹</p>
+  </footer>
+
+  <script src="events.js"></script>
+</body>
+</html>
 
