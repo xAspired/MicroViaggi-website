@@ -1,0 +1,217 @@
+/* ─────────────────────────────────────────
+   Micro Viaggi del Tempo — asia.css
+   Pagina dedicata: percorso Asia (v3.0)
+   ───────────────────────────────────────── */
+
+/* ─── HERO ─── */
+.asia-hero {
+  position: relative;
+  min-height: 86svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 70px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.asia-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/hero-asia.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  z-index: -2;
+  transform: scale(1.04);
+}
+
+.asia-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to bottom, rgba(12, 21, 38, 0.55) 0%, rgba(12, 21, 38, 0.75) 55%, var(--navy) 100%),
+    linear-gradient(to right, rgba(12, 21, 38, 0.6), rgba(12, 21, 38, 0.2) 40%, rgba(12, 21, 38, 0.6));
+}
+
+.back-link {
+  position: absolute;
+  top: 96px;
+  left: 28px;
+  z-index: 2;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(245, 240, 230, 0.75);
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.1s forwards;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.asia-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.asia-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 9vw, 84px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.3s forwards;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.asia-hero-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.asia-hero-sub {
+  max-width: 560px;
+  font-size: clamp(14px, 2.6vw, 17px);
+  color: rgba(245, 239, 224, 0.85);
+  line-height: 1.6;
+  margin-bottom: 44px;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.45s forwards;
+}
+
+.asia-hero .cta-wrap {
+  opacity: 0;
+  animation: fadeUp 0.9s 0.6s forwards;
+}
+
+/* ─── INTRO ─── */
+.asia-intro {
+  text-align: center;
+  max-width: 740px;
+  padding-top: 72px;
+}
+
+.asia-intro-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 4.4vw, 38px);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: var(--cream);
+}
+
+.asia-intro-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+/* ─── TRIPS GRID ─── */
+.asia-trips {
+  max-width: 1080px;
+  padding-top: 20px;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.trip-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 151, 58, 0.14);
+  background: var(--navy-mid);
+  aspect-ratio: 16 / 11;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.trip-card:hover {
+  border-color: rgba(201, 151, 58, 0.4);
+  transform: translateY(-3px);
+}
+
+.trip-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8, 14, 25, 0.95) 0%, rgba(8, 14, 25, 0.35) 48%, rgba(8, 14, 25, 0.05) 75%);
+}
+
+.trip-card-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 18px;
+  z-index: 1;
+}
+
+.trip-year {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  background: var(--gold);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+}
+
+.trip-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.trip-place {
+  font-size: 11px;
+  color: rgba(245, 239, 224, 0.7);
+  letter-spacing: 0.02em;
+}
+
+/* NB: "Hiroshima" e "Gandhi" erano gia' nel catalogo — entrano nel percorso
+   senza essere nuovi viaggi, marcati con un badge diverso. */
+.trip-card.existing .trip-year {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid rgba(201, 151, 58, 0.45);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 560px) {
+  .asia-hero       { padding: 110px 20px 56px; min-height: 80svh; }
+  .trips-grid      { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .back-link       { top: 118px; left: 20px; }
+}
